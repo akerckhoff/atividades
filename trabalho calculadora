@@ -1,0 +1,104 @@
+#include <stdio.h>
+
+// usuário GitHub: akerckhoff
+
+int main ()
+{
+  printf("Olá! Esse programa foi desenvolvido pela aluna Ana Paula Kerckhoff, estudante do curso de Gestão de TI, da Universidade La Salle, matrícula nº 202222247.\n\n");
+
+  // variaveis
+  
+  float num1,num2,r1,r2,soma,sub,multi,divi,pote1,pote2;  
+  int inte1,inte2, inte3;
+
+  printf("Esse programa é uma calculadora e você vai me ajudar em alguns testes.\n\nVamos começar!\n\n");
+
+  // laço para iniciar o programa
+  
+  do {    
+  
+  printf("\nDigite o primeiro numero: ");
+        scanf("%f", &num1);
+        printf("\nDigite o segundo numero: ");
+        scanf("%f", &num2);
+        printf("\n");
+  
+    printf("Qual operação abaixo você deseja realizar?  1 - Raiz quadrada    2 - Outras expressoes\n\n");
+        scanf("%d", &inte1);
+        printf("\n");
+  
+  //atribuindo valores para raiz e potencia
+  r1 = sqrt(num1);
+  r2 = sqrt(num2);
+  pote1 = pow(num1,2);
+  pote2 = pow(num2,2);
+  
+
+  // escolha para as primeiras opções  
+
+  switch (inte1) {   
+
+    case 1 :
+
+     printf("Raiz quadrada do primeiro numero: %0.2f\n", r1);
+     printf("Raiz quadrada do segundo numero: %0.2f\n", r2);
+      break;
+
+        
+   default :
+     printf("Opcao invalida. Tente novamente!\n");
+      break;
+             
+    
+  case 2 :
+     printf("\nEscolha uma das opcoes abaixo:\n\n1 - Soma\n2 - Subtracao\n3 - Multiplicacao\n4 - Divisao\n5 - Potenciacao\n0 - Sair\n\n");
+
+     printf("Opcao: ");
+     scanf("%d", &inte2);
+     printf("\n");
+      break;
+    
+    }
+      
+  // escolha para a outras expressões         
+
+  switch(inte2){  
+   
+    case 0:
+      printf("Saindo, obrigada por participar!\n");
+      break;
+    
+    case 1:
+      printf("Soma: %0.2f\n", num1 + num2);
+      break;
+    
+    case 2: 
+      printf("Subtracao: %0.2f\n", num1 - num2);
+      break;
+    
+    case 3:
+      printf("Multiplicacao: %0.2f\n", num1 * num2);
+      break;
+    
+    case 4:   
+        printf("Divisao: %0.2f\n", num1 / num2);
+        break;
+    
+    case 5:
+      printf("Potenciacao numero 1: %0.2f\n", pote1);
+      printf("Potenciacao numero 2: %0.2f\n", pote2);
+        break;
+    
+    
+    }
+
+  // finalizacao
+    
+  printf("\n\n Para reiniciar, aperte 0.\n\n OU\n\n Para finalizar aperte qualquer tecla: ");
+    scanf("%d", &inte3);
+
+        } while (inte3 == 0); 
+          printf("\n\n PROGRAMA FINALIZADO ");
+  
+  return 0;
+}
